@@ -5,7 +5,6 @@
     border: 0px solid violet;
 }
 
-
 #page {
 
 
@@ -14,26 +13,23 @@
     align-items: center;
     height: 100vh;
     /* background-color: #f7e4e4; */
-
-
-    background-color:  rgba(229, 229, 247, 1);
-/* opacity: 0.4; */
-background-image: radial-gradient(#f18585 0.35000000000000003px, #e7e7f1 0.35000000000000003px);
-background-size: 7px 7px;
+    background-color: rgba(229, 229, 247, 1);
+    /* opacity: 0.4; */
+    background-image: radial-gradient(#f18585 0.35000000000000003px, #e7e7f1 0.35000000000000003px);
+    background-size: 7px 7px;
+    padding: 20px;
 
 }
 
 #outside {
 
-
-    margin: 10px;
     background-color: rgb(170, 10, 10);
     border: 1px solid rgb(170, 10, 10);
     border-radius: 12px;
     border-radius: 15px;
     display: flex;
-    width: 650px;
-    height: 650px;
+    width: 640px;
+    height: 640px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -54,7 +50,6 @@ background-size: 7px 7px;
 
 .buttons {
     position: relative;
-
     top: 10px;
     display: flex;
     flex-direction: row;
@@ -62,9 +57,6 @@ background-size: 7px 7px;
     width: 620px;
     gap: 500px;
     height: 60px;
-
-
-
 }
 
 button {
@@ -97,6 +89,7 @@ button:hover {
 
 #container div {
     box-sizing: border-box;
-    border: .05px solid #ccc;
+    border: .5px solid rgb(126, 126, 123 , .2);
+
 }
 
