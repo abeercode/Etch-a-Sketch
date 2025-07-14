@@ -1,10 +1,12 @@
 const container = document.querySelector("#container")
-
-for( let i = 0 ; i < 256; i++){
+const width = container.clientWidth 
+console.log(width)
+const user = parseFloat("3")
+for( let i = 0 ; i < user*user ; i++){
 
     let div1= document.createElement("div")
-    div1.style.height="16px"
-    div1.style.width="16px"
+    div1.style.height= (width/ user).toString() + "px"
+    div1.style.width=(width/ user).toString() + "px"
     container.appendChild(div1)
 }
 
