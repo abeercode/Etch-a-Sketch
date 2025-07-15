@@ -18,6 +18,15 @@ grid.addEventListener("click", () => {
     }
 })
 
+let isDrawing = false;
+
+container.addEventListener("mousedown", () => {
+    isDrawing = true;
+});
+container.addEventListener("mouseup", () => {
+    isDrawing = false;
+});
+
 clearB.addEventListener("click", () => {
     clearGrid()
 })
@@ -26,9 +35,17 @@ function colorGrid() {
     let divs = getDivs()
     divs.forEach(div => {
         div.addEventListener("mouseenter", () => {
-            let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-            div.style.backgroundColor = "#" + randomColor
+            if (isDrawing) {
+                let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                div.style.backgroundColor = "#" + randomColor
+            }
         })
+
+
+          div.addEventListener("mousedown", () => {
+            let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            div.style.backgroundColor = "#" + randomColor;
+        });
     })
 }
 function gridmaker(gridSize) {
@@ -60,6 +77,6 @@ function clearGrid() {
 
 }
 
-function getDivs(){
+function getDivs() {
     return document.querySelectorAll("#container div")
 }
